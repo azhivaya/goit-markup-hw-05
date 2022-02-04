@@ -62,7 +62,17 @@
             Эффективные решения<br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="button primary">Заказать услугу</button>
+          <button type="button" class="button primary" data-modal-open>Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <p>Будущая форма связи</p>
+              <button class="close-button" data-modal-close>
+                <svg class="close-icon">
+                  <use href="images/icons.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!--Features section-->
@@ -118,12 +128,15 @@
           <ul class="work-list">
             <li class="work-item">
               <img src="./images/img-what-we-do-1.jpg" alt="написание кода" width="370" />
+              <p class="work-item-text">Десктопные приложения</p>
             </li>
             <li class="work-item">
               <img src="./images/img-what-we-do-2.jpg" alt="адаптивный интерфейс" width="370" />
+              <p class="work-item-text">Мобильные приложения</p>
             </li>
             <li class="work-item">
               <img src="./images/img-what-we-do-3.jpg" alt="цветовая палитра" width="370" />
+              <p class="work-item-text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -314,5 +327,6 @@
       </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
