@@ -244,41 +244,6 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.2);
-
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: visible;
-
-  width: 528px;
-  height: 581px;
-
-  background-color: var(--text-color-white);
-  border-radius: 4px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
 .close-button {
   position: absolute;
   top: 8px;
@@ -401,9 +366,9 @@ a {
 }
 
 .work-item {
-  margin-right: 30px;
-
   position: relative;
+
+  margin-right: 30px;
 }
 
 .work-item:nth-child(3n) {
@@ -414,15 +379,17 @@ a {
   position: absolute;
   bottom: 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   height: 70px;
-
-  padding-top: 27px;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
+
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--text-color-white);
@@ -527,9 +494,7 @@ a {
 }
 
 .social-links:hover,
-.social-links:focus,
-.footer-socials-link:hover,
-.footer-socials-link:focus {
+.social-links:focus {
   background-color: var(--accent-color);
   color: var(--text-color-white);
 }
@@ -647,6 +612,15 @@ a {
 
   background-color: var(--footer-socials-bgc);
   fill: var(--text-color-white);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--text-color-white);
 }
 
 .footer-socials-item {
@@ -752,4 +726,41 @@ a {
 
   font-size: 16px;
   line-height: 1.87;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* z-index: 2; */
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--text-color-white);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
